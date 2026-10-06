@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+body {
+  font-family: Roboto;
+  font-size: 14px;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: 1fr repeat(2, 2.5fr);
+    grid-template-columns: 2fr 3fr 3fr 2fr;
+    /*border: 2px solid #333; /*debug outline*/
+    height: 95vh;
+}
+.sidebar {
+    display: grid;
+    grid-template-rows: 1fr 1fr repeat(6,1fr) 1fr repeat(3,1fr) 12fr;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    /*border: 2px solid #333; /*debug outline*/
+    background-color: #2a9cd1; 
+    color: white;
+}
+.sidebar-item {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    gap:10px;
+    padding:10px;
+    font-size: 20px;
+    font-weight: bold;
+    place-items: center start;
+    /*border: 2px solid #333; /*debug outline*/
+}
+img[src$=".PNG"] {
+    width: 50px;
+}
+
+.sidebar-item > img[src$=".svg"] {
+    filter: invert(100%);
+}
+
+img {
+    display:block;
+    margin: auto;
+    width: 25px;
+    height: auto;
+}
+.grid-title {
+    grid-column: 1 /-1;
+    font-size: 18px;
+    margin-bottom:0;
+}
+.header {
+    display: grid;
+    grid-template-columns: 6fr 3fr;
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    /*border: 2px solid #333; /*debug outline*/
+}
+.header-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;     /* Aligns along the cross axis (vertical) */
+    font-size: 16px;
+    font-weight: bold;
+    gap:20px;
+    padding:10px;
+    padding-left:40px;
+    /*border: 2px solid #333; /*debug outline*/
+}
+/*
+.header-item > *{
+    /*border: 2px solid #333; /*debug outline 
+}
+*/
+
+button {
+    width: 90px;
+    height: 35px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 50px;
+    color: white;
+    background-color: #2a9cd1; 
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-content: start;
+    gap: 20px;
+    padding: 15px;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    /*border: 2px solid #333; /*debug outline*/
+    background-color: #E8E8E8; 
+}
+/*
+.projects > *{
+    /*border: 2px solid #333; /*debug outline
+}
+*/
+
+.project-item {
+    display: grid;
+    font-size: 16px;
+    color:dimgray;
+    padding: 20px 30px ;
+    place-items: start start;
+    /*border: 2px solid #333; /*debug outline*/
+    background-color: white; 
+    /* Use border width for spacing and border color for the padding color */
+    border-left: 10px solid #ffbf00; 
+}
+
+.project-btn {
+    display: grid;
+    grid-auto-flow: column;
+    justify-self:end;
+    gap:25px;
+}
+
+.annoucements {
+    padding: 15px;
+
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    /*border: 2px solid #333; /*debug outline*/
+    background-color: #E8E8E8; 
+}
+.annoucement-item {
+    font-size: 12px;
+    color:dimgray;
+    padding: 10px 20px;
+    place-items: start start;
+    /*border: 2px solid #333; /*debug outline*/
+    background-color: white; 
+}
+
+.trending {
+    padding: 15px;
+    
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    /*border: 2px solid #333; /*debug outline*/ 
+    background-color: #E8E8E8; 
+}
+
+.trend-item {
+    display: grid;
+    grid-auto-flow: column;
+    font-size: 14px;
+    color:dimgray;
+    padding: 10px;
+    place-items: start start;
+    /*border: 2px solid #333; /*debug outline*/
+    background-color: white; 
+}
